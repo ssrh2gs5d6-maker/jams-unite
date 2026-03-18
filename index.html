@@ -9,6 +9,7 @@
     <title>MGA Fan World</title>
 
     <style>
+      /* ===== 全体 ===== */
       body{
         margin:0;
         font-family:sans-serif;
@@ -16,6 +17,32 @@
         overflow-x:hidden;
       }
 
+      /* ===== ナビ ===== */
+      nav{
+        position:fixed;
+        top:0;
+        width:100%
+        display:flex;
+        fustify-content:center;
+        gap:30px;
+        padding:15px;
+        background:rgba(255,255,255,0.2);
+        backdrop-filter:blur(10px);
+        z-index:1000;
+      }
+
+      nav a{
+        text-decoration:none;
+        color:white;
+        font-weight:bold;
+        transition:0.3s;
+      }
+
+      nav a:hover{
+        color:#004d40;
+      }
+
+      /* ===== バブル ===== */
       .bubble{
         position:fixed;
         bottom:-100px;
@@ -29,6 +56,8 @@
         0%{transform:translateY(0)}
         100%{transform:translateY(-120vh)}
       }
+
+      /* ===== ヒーロー ===== */
 
       .hero{
         height:90vh;
@@ -44,6 +73,8 @@
         font-size:60px;
       }
 
+      /* ===== セクション ===== */
+
       section{
         padding:80px 10%;
       }
@@ -55,6 +86,22 @@
         color:#0b6e4f;
       }
 
+      /* ===== カード共通 ===== */
+      .card{
+      background:rgba(255,255,255,0.25);
+      backdrop-filter:blur(15px);
+      border-radius:20px;
+      padding:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+      ttransition:0.3s;
+      }
+
+      .card:hover{
+      transtorm:translate Y(-10px)scale(1.03);
+      box-shadow:0 20px 40px rgba(0,0,0,0.2);
+      }
+
+      /* ===== メンバー ===== */
       .members{
         display:flex;
         justify-content:center;
@@ -71,6 +118,7 @@
         box-shadow:0 10px 20px rgba(0,0,0,0.1);
       }
 
+      /* ===== タイムライン ===== */
       .timeline{
         border-left:4px solid#1b9c85;
         margin:40px auto;
@@ -86,6 +134,7 @@
         color:#1b9c85;
       }
 
+      /* ===== 曲 ===== */
       .songs{
         display:grid;
         grid-temolate-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -97,11 +146,40 @@
         padding:20px;
         border-radius:15px;
       }
+
+      /* ===== フッター ===== */
+      footer{
+      text-align:center;
+      padding:30px;
+      background;rgba(0,0,0,0.2);
+      color:white;
+      margin-top:50px;
+      }
+
+      /* ===== レスポンシブ ===== */
+      @media(max-width:600px){
+
+        .hero h1{
+          font-size:40px;
+        }
+
+        h2{
+          font-size:30px;
+        }
+      }
       
     </style>
   </head>
 
   <body>
+
+    <!-- ナビ -->
+    <nav>
+      <a href="#top">TOP</a>
+      <a href="#members">メンバー</a>
+      <a href="#history">歴史</a>
+      <a href="#songs">曲</a>
+    </nav>
 
     <!-- バブル -->
     <div class="bubble"style="left:10%animation-durarion:10s"></div>
@@ -110,11 +188,13 @@
     <div class="bubble"style="left:70%:animation-duration:11s"></div>
     <div class="bubble"style="left:90%:animation-duration:13s"></div>
 
+    <--! HERO -->
     <section class="hero">
-      <h1>Mrs.GREENAPPLE</h1>
-      <p>ALL about Mrs.GREEN APPLE</p>
+    <h1>Mrs.GREENAPPLE</h1>
+    <p>ALL about Mrs.GREEN APPLE</p>
     </section>
 
+    <--! メンバー -->
     <section>
 
       <h2>メンバー</h2>
@@ -122,23 +202,24 @@
       <div class="members">
 
         <div class="member">
-          <h3>大森元貴</h3>
-        　<p>Vo/Gt</p>
-          <p>P-MGAプロデューサー</p>
+        <h3>大森元貴</h3>
+        <p>Vo/Gt</p>
+        <p>P-MGAプロデューサー</p>
         </div>
 
         <div class="member">
-          <h3>若井滉斗</h3>
-          <p>Gt</p>
+        <h3>若井滉斗</h3>
+        <p>Gt</p>
         </div>
 
         <div class="member">
-          <h3>藤澤涼架</h3>
-          <p>Key</p>
+        <h3>藤澤涼架</h3>
+        <p>Key</p>
         </div>
         
     </section>
 
+    <--! 歴史 -->
     <section>
 
       <h2>Mrs.GREENAPPLE History</h2>
@@ -146,36 +227,43 @@
       <div class="timeline">
 
         <div class="timeline-item">
-          <h3>2015 - Phase1</h3>
-          <p>メジャーデビュー</p>
+        <h3>2015 - Phase1</h3>
+        <p>メジャーデビュー</p>
         </div>
 
         <div class="timeline-item">
-          <h3>2020 - 活動休止</h3>
-          <p>「フェーズ１完結」を宣言。</p>
+        <h3>2020 - 活動休止</h3>
+        <p>「フェーズ１完結」を宣言。</p>
         </div>
 
         <div class="timeline-item">
-          <h3>2022 - Phase2</h3>
-          <p>３人体制再始動。</p>
+        <h3>2022 - Phase2</h3>
+        <p>３人体制再始動。</p>
         </div>
 
         <div class="timeline-item">
-          <h3>2026 - Phase3</h3>
+        <h3>2026 - Phase3</h3>
         </div>
         
     </section>
 
+    <--! 曲 -->
     <section>
 
       <div class="songs">
+      <h2>フェーズ別始まりの曲</h2>
 
-        <div class="song">StaRt</div>
-        <div class="song">ニュー・マイ・ノーマル</div>
-        <div class="song">lulu.</div>
+      <div class="song">StaRt</div>
+      <div class="song">ニュー・マイ・ノーマル</div>
+      <div class="song">lulu.</div>
       </div>
+    　</section>
 
-    </section>
+      <footer>
+      <p>©️2026 MGA Fan World</p>
+      <p>※非公式ファンサイトです</p>
+      </footer>
+      
   </body>
 </html>
 
